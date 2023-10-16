@@ -100,13 +100,13 @@ RUN_DEPS := $(BUILT) $(BUILD_DIR) build
 # Run the container and exit
 run: $(RUN_DEPS)
         dnf -y install -y http://linux.mirrors.es.net/perfsonar/el9/x86_64/5/packages/perfsonar-repo-0.11-1.noarch.rpm
-	./build $(BUILD_ARGS)
+	#./build $(BUILD_ARGS)
 
 
 # Run the container but don't exit (for debug)
 persist: $(RUN_DEPS)
         dnf -y install -y http://linux.mirrors.es.net/perfsonar/el9/x86_64/5/packages/perfsonar-repo-0.11-1.noarch.rpm
-	./build --no-halt $(BUILD_ARGS)
+	#./build --no-halt $(BUILD_ARGS)
 
 
 # Log into the persisted container
