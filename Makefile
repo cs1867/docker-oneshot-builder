@@ -99,7 +99,7 @@ RUN_DEPS := $(BUILT) $(BUILD_DIR) build
 
 # Run the container and exit
 run: echo $(RUN_DEPS)
-        dnf -y install -y http://linux.mirrors.es.net/perfsonar/el9/x86_64/5/packages/perfsonar-repo-0.11-1.noarch.rpm
+       # dnf -y install -y http://linux.mirrors.es.net/perfsonar/el9/x86_64/5/packages/perfsonar-repo-0.11-1.noarch.rpm
 	#./build $(BUILD_ARGS)
 
 
