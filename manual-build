@@ -1,0 +1,8 @@
+#!/bin/sh -e
+#
+# Install dependancies the do a DOSB build with a container from GHCR.
+#
+
+
+echo "Test this script"
+#dnf -y install -y http://linux.mirrors.es.net/perfsonar/${{ matrix.os }}/x86_64/5/packages/perfsonar-repo-0.11-1.noarch.rpm
