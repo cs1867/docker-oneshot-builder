@@ -130,7 +130,7 @@ case "${OS}" in
 	if [ -d '/sys/fs/cgroup/cgroup.controllers' ]
 	then
 	    # Cgroups v2
-	    PERM_ARGS="--volume /sys/fs/cgroup:/sys/fs/cgroup:rw"
+	    PERM_ARGS="--volume /sys/fs/cgroup:/sys/fs/cgroup:ro"
 	else
 	    PERM_ARGS="--privileged"
 	fi
@@ -161,9 +161,6 @@ ${ECHO} ${SUDO} docker run \
 	--volume "${BUILD_DIR}:/build" \
 	${NO_HALT} \
 	--rm \
-        --cgroupns host \ 
-        --cap-add SYS_ADMIN \
-        --security-opt seccomp:unconfined \
 	${PERM_ARGS} \
 	"${CONTAINER}" \
     || STATUS=$?
