@@ -15,8 +15,8 @@ jobs:
          run: pwd;ls -al
 
        - name: Run Docker Run
-         run: curl -s https://raw.githubusercontent.com/cs1867/docker-oneshot-builder/main/build | sh -s - --command ./test-product ${{ matrix.os }}
-         #run: curl -s https://raw.githubusercontent.com/cs1867/docker-oneshot-builder/main/build | sh -s - ./test-product ${{ matrix.os }}
+         #run: curl -s https://raw.githubusercontent.com/cs1867/docker-oneshot-builder/main/build | sh -s - --command ./test-product ${{ matrix.os }}
+         run: curl -s https://raw.githubusercontent.com/cs1867/docker-oneshot-builder/main/build | sh -s - ./test-product ${{ matrix.os }}
 
    #    - name: tar files
     #     run: tar -cvf pscheduler.tar ./unibuild-repo
