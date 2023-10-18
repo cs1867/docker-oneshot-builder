@@ -161,6 +161,7 @@ ${ECHO} ${SUDO} docker run \
 	--volume "${BUILD_DIR}:/build" \
 	${NO_HALT} \
 	--rm \
+        --cap-add SYS_ADMIN \
 	${PERM_ARGS} \
 	"${CONTAINER}" \
     || STATUS=$?
