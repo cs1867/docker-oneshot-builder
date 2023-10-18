@@ -162,7 +162,7 @@ ${ECHO} ${SUDO} docker run \
 	${NO_HALT} \
 	--rm \
         --cap-add SYS_ADMIN --tmpfs /run -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
-        --security_opt seccomp:unconfined \
+        --security-opt seccomp:unconfined \
 	${PERM_ARGS} \
 	"${CONTAINER}" \
     || STATUS=$?
