@@ -4,7 +4,7 @@ jobs:
   setup-containers:
     strategy:
       matrix:
-          os: [ 'el7']
+          os: [ 'd10']
  
     runs-on: ubuntu-latest
    
